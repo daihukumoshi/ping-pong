@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package exclamation;
+
+option go_package = "ping-pong/exclamation-service;exclamation";
+
+service ExclamationService {
+  rpc GetExclamation (ExclamationRequest) returns (ExclamationResponse);
+}
+
+message ExclamationRequest {
+  string message = 1;
+}
+
+message ExclamationResponse {
+  string response = 1;
+}

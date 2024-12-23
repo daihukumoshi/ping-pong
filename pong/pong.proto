@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pong;
+
+option go_package = "ping-pong/pong-service;pong";
+
+service PongService {
+  rpc GetPong (PongRequest) returns (PongResponse);
+}
+
+message PongRequest {
+  string message = 1;
+}
+
+message PongResponse {
+  string response = 1;
+}

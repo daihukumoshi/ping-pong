@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package bff;
+
+option go_package = "ping-pong/bff;bff";
+
+service BFFService {
+  rpc ForwardPing (BFFRequest) returns (BFFResponse);
+}
+
+message BFFRequest {
+  string message = 1;
+}
+
+message BFFResponse {
+  string response = 1;
+}
